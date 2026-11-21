@@ -1,0 +1,12 @@
+{
+  "name": "m3-w3-d2-homework",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass scss/styles.scss css/styles.css",
+    "watch": "sass --watch scss:css"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}

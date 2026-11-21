@@ -1,0 +1,55 @@
+
+@import "colors";
+
+@mixin panel($background-color) {
+    background-color: $background-color;
+    height: 100%;
+    position: relative;
+}
+
+//Global
+* {
+    color: $green;
+    font-size: 1.2rem;
+}
+
+.container {
+    background-color: $white;
+    border: 1px solid #000;
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1em;
+    width: 50%;
+
+    .left {
+        @include panel($yellow);
+        width: 69%;
+    }
+
+    .right {
+        @include panel($sage);
+        width: 29%;
+
+        .button {
+            background-color: $lime;
+            color: $green;
+            border: 0;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 7em;
+            height: 2.5em;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5em 2em;
+
+            //this is to center content vertically
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -120%);
+        }
+    }
+
+}
